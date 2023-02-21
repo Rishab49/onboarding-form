@@ -20,6 +20,8 @@ const FileInput = ({ name }) => {
           className="h-[45px] w-auto p-2 border hidden"
           name={name}
           onChange={(e) => setFileName(e.target?.files[0]?.name)}
+          onInvalid={() => alert("please select a file")}
+          required
         ></input>
       </label>
     </>
